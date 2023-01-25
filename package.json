@@ -1,0 +1,26 @@
+{
+  "name": "simple-conponents",
+  "version": "1.0.0",
+  "description": "\"# simple-components-js\"",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon --watch ./ ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peacepiece7/simple-components-js.git"
+  },
+  "keywords": [],
+  "author": "peacepiece",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/peacepiece7/simple-components-js/issues"
+  },
+  "homepage": "https://github.com/peacepiece7/simple-components-js/index.html",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}

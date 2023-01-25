@@ -1,0 +1,90 @@
+{
+  "settings" : {
+    "index" : {
+      "max_ngram_diff" : "50",
+      "analysis" : {
+        "filter" : {
+          "3gram_tokenizer" : {
+            "type" : "ngram",
+            "min_gram" : "3",
+            "max_gram" : "30"
+          }
+        },
+        "analyzer" : {
+          "3gram_analyzer" : {
+            "filter" : [
+              "lowercase",
+              "3gram_tokenizer"
+            ],
+            "tokenizer" : "whitespace"
+          }
+        }
+      }
+    }
+  },
+    "mappings": {
+    "properties": {
+      "brand" : {
+        "type" : "text",
+        "fields" : {
+          "3gram" : {
+            "type" : "text",
+            "analyzer" : "3gram_analyzer",
+            "search_analyzer" : "standard"
+          },
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      
+      "category" : {
+          "type" : "text",
+          "fields" : {
+            "3gram" : {
+              "type" : "text",
+              "analyzer" : "3gram_analyzer",
+              "search_analyzer" : "standard"
+            },
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        
+        "model" : {
+          "type" : "text",
+          "fields" : {
+            "3gram" : {
+              "type" : "text",
+              "analyzer" : "3gram_analyzer",
+              "search_analyzer" : "standard"
+            },
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+       "subcategory" : {
+        "type" : "text",
+        "fields" : {
+          "3gram" : {
+            "type" : "text",
+            "analyzer" : "3gram_analyzer",
+            "search_analyzer" : "standard"
+          },
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

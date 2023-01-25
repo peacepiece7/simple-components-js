@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Toggle Compoenents</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <!-- css에서 input:check css를 사요용하려면 lebal을 사용해야하는데 -->
+    <!-- 이떄 id를 써야합니다. id가 남발되지 않도록 주의하세요 -->
+    <!-- <label for="toggle"></label> -->
+    <div class="toggleCover">
+      <input type="checkbox" class="toggleCheckbox" />
+      <div class="toggleSwitch"></div>
+      <span class="toggleBtn"></span>
+    </div>
+  </body>
+  <script>
+    function handleToggleClick(event) {
+      event.target.parentNode.querySelector('input').click()
+    }
+    document.querySelector('.toggleBtn').addEventListener('click', handleToggleClick)
+  </script>
+</html>
