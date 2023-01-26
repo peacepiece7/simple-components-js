@@ -1,27 +1,27 @@
 body {
-    height: 100vh;
+  height: 100vh;
 }
 .title {
-    background-image: linear-gradient(to right, #f0dede, #edb9b9,#e39a9a);
-    font-weight:400;
+  background-image: linear-gradient(to right, #f0dede, #edb9b9,#e39a9a);
+  font-weight:400;
 }
 .title2 {
-    background-image: linear-gradient(179deg, #ffeffe 20% , #beecee , #feefee );
-    font-weight:400;
+  background-image: linear-gradient(179deg, #ffeffe 20% , #beecee , #feefee );
+  font-weight:400;
 }               
 .title3 {
-    background-image: linear-gradient(179deg, #f99fff, #feecee , #eaaeaa );
-    -webkit-background-clip: text;
-    color: transparent;
+  background-image: linear-gradient(179deg, #f99fff, #feecee , #eaaeaa );
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .gradientText {
-    font-family: sans-serif;
-    position: relative;
-    z-index: 1;
-    background-image: linear-gradient(to right, #000, #000); 
-    -webkit-background-clip: text;
-    color: transparent;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(to right, #000, #000); 
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .gradientText::before {
   position: absolute;
