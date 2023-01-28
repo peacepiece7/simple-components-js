@@ -1,7 +1,6 @@
 body {
   height: 100vh;
 }
-
 .title {
   background-image: linear-gradient(to right, #f0dede, #edb9b9, #e39a9a);
   font-weight: 400;
@@ -16,7 +15,6 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .title4 {
   border: 10px solid transparent;
   border-radius: 5px;
@@ -37,7 +35,6 @@ body {
   font-size: 20px;
   margin: 0;
 }
-
 .gradientText {
   position: absolute;
   font-family: sans-serif;
@@ -60,10 +57,9 @@ body {
 .transitionOn::before {
   opacity: 1;
 }
-
 .gradirent {
   width: 100%;
-  height: 400px;
+  height: 500px;
   margin-top: 200px;
   padding: 200px 0 0 20px;
   font-size: 40px;
@@ -102,7 +98,6 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 /* h1::before라서 .transitionOn::before는 동작하지 않는거같음 */
 h1.transitionOn::before {
   opacity: 1;
