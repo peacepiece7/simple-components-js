@@ -1,47 +1,109 @@
 body {
   height: 100vh;
 }
+
 .title {
-  background-image: linear-gradient(to right, #f0dede, #edb9b9,#e39a9a);
-  font-weight:400;
+  background-image: linear-gradient(to right, #f0dede, #edb9b9, #e39a9a);
+  font-weight: 400;
 }
 .title2 {
-  background-image: linear-gradient(179deg, #ffeffe 20% , #beecee , #feefee );
-  font-weight:400;
-}               
+  background-image: linear-gradient(179deg, #ffeffe 20%, #beecee, #feefee);
+  font-weight: 400;
+}
 .title3 {
-  background-image: linear-gradient(179deg, #f99fff, #feecee , #eaaeaa );
+  background-image: linear-gradient(179deg, #f99fff, #feecee, #eaaeaa);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
+.title4 {
+  border: 10px solid transparent;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #fff linear-gradient(90deg, #fff 0%, #fff 100%);
+  border-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-image-slice: 1;
+}
+.box {
+  border: 10px solid transparent;
+  border-radius: 5px;
+  /* 첫번쨰 값은 content-box, 두번째는 border-box */
+  background-image: linear-gradient(to right, #eeeaaa, #eeeddd, #fff), linear-gradient(to right, #fff, #eeeddd, #eeeaaa);
+  background-clip: content-box, border-box;
+  background-origin: border-box;
+}
+.box h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
 .gradientText {
+  position: absolute;
   font-family: sans-serif;
-  position: relative;
-  z-index: 1;
-  background-image: linear-gradient(to right, #000, #000); 
+  background: linear-gradient(179deg, #ffeffe 20%, #beecee, #feefee);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 .gradientText::before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  content: "The brown fox jumps over the lazy dog."; 
-  background-image: linear-gradient(179deg, #ffeffe 20% , #beecee , #feefee ); 
+  content: 'The brown fox jumps over the lazy dog.';
+  /* 반드시 before가 어두운 색이여야 합니다. before가 밝으면 글자 바깥쪽이 거무스름 해집니다. */
+  background: linear-gradient(to right, #000, #000);
   transition: opacity 0.5s linear;
   opacity: 0;
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
 }
 .transitionOn::before {
   opacity: 1;
 }
 
+.gradirent {
+  width: 100%;
+  height: 400px;
+  margin-top: 200px;
+  padding: 200px 0 0 20px;
+  font-size: 40px;
+  font-family: sans-serif;
+  background-color: #111111;
+}
+.gradient-cover {
+  position: relative;
+  width: 100%;
+  height: 90px;
+}
+.gradient-cover h1 {
+  position: absolute;
+  background-image: linear-gradient(to right, #f0dede, #edb9b9, #e49a9f);
+  opacity: 1;
+  transition: opacity 0.5s linear;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gradient-cover:first-child h1::before {
+  content: 'The Brown Fox';
+}
+.gradient-cover:nth-child(2) h1::before {
+  content: 'Jumps Over The Lazy Dog';
+}
+.gradient-cover:last-child h1::before {
+  content: 'Gradient Text';
+}
+.gradient-cover h1::before {
+  position: absolute;
+  background: linear-gradient(140deg, #ffeffe 20%, #beecee);
+  transition: opacity 0.5s linear;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-
-
-
-
+/* h1::before라서 .transitionOn::before는 동작하지 않는거같음 */
+h1.transitionOn::before {
+  opacity: 1;
+}
