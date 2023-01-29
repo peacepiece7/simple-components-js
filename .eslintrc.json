@@ -1,7 +1,7 @@
 {
   // 최상위 설정 "root" : false로 개별 프로잭트 설정 가능
   "root": true,
-  "extends": ["eslint:recommended", "plugin:node/recommended", "plugin:prettier/recommended"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   // 옵션 규칙을 세세하게 제어하기위해 사용, extends보다 우선 순위가 높습니다.
   "rules": {
     // console driven development인 나에게 필요한 옵션..
