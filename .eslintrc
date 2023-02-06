@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["html", "@html-eslint"], // eslint-plugin-html,
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "parser": "@html-eslint/parser",
+      "extends": ["plugin:@html-eslint/recommended"],
+      "rules": {
+        "@html-eslint/indent": ["error", 2],
+        "@html-eslint/id-naming-convention": ["error", "kebab-case"],
+        "@html-eslint/no-multiple-empty-lines": ["error", { "max": 0 }],
+        "@html-eslint/require-closing-tags": ["error", { "selfClosing": "never" }]
+      }
+    }
+  ],
+  "settings": {
+    "html/xml-extensions": [".html"] // html을 xml로 간주
+  },
+  "rules": {
+    // js
+    "no-console": "warn",
+    "camelcase": "off",
+    "no-plusplus": "off",
+    "no-await-in-loop": "off",
+    "no-return-await": "off",
+    "no-promise-executor-return": "off",
+    "semi": ["error", "never"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["build", "dist"]
+}

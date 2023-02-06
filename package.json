@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/peacepiece7/simple-components-js/index.html",
   "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.16.0",
+    "@html-eslint/parser": "^0.16.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.3"
   }
